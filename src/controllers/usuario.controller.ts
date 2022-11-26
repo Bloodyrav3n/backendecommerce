@@ -1,4 +1,5 @@
 import { service } from '@loopback/core';
+import { authenticate } from '@loopback/authentication';
 import {
   Count,
   CountSchema,
@@ -24,7 +25,7 @@ import {UsuarioRepository} from '../repositories';
 import { AutenticacionService } from '../services';
 const fetch = require('node-fetch');
 
-//@authenticate("admin")
+@authenticate("admin")
 export class UsuarioController {
   constructor(
     @repository(UsuarioRepository)

@@ -36,7 +36,7 @@ export class Producto extends Entity {
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
   thumbnail: string;
 
